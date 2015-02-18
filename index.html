@@ -1,0 +1,70 @@
+<html>
+<body>
+<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+
+<script>
+$(function(){
+	var first = true;
+	$(".box").click(function(){
+		if(!$(this).hasClass('clicked')){
+			if(first){
+				$(this).css('background','green');
+				
+				first = false;
+			}else{
+				$(this).css('background','red');
+				
+				first = true;
+			}
+			$(this).addClass('clicked');
+		}
+	});
+})
+</script>
+<style>
+.clicked{
+	cursor:normal;
+}
+.row{
+	width:100%;
+}
+.box{
+	background:white;
+	padding:50px;
+	margin:3px;
+	float:left;
+	width:50px;
+	cursor:pointer;
+}
+.clear{
+	clear:both;
+}
+.jogo{
+	margin: 0px auto;
+	width: 468px;
+	background: black;
+}
+</style>
+<div class='jogo'>
+	<div class='row'>
+		<div class='box'></div>
+		<div class='box'></div>
+		<div class='box'></div>
+		<div class='clear'></div>
+	</div>
+	<div class='row'>
+		<div class='box'></div>
+		<div class='box'></div>
+		<div class='box'></div>
+		<div class='clear'></div>
+	</div>
+	<div class='row'>
+		<div class='box'></div>
+		<div class='box'></div>
+		<div class='box'></div>
+		<div class='clear'></div>
+	</div>
+</div>
+
+</body>
+</html>
