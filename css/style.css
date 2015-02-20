@@ -1,0 +1,83 @@
+.screen{
+	margin: 0px auto;
+	width: 900px;
+	height: 500px;
+	background-size: 1098px 750;
+	background-position: center;
+	background: url("../img/desk.jpg") 0 -95px no-repeat;
+}
+.clicked{
+	cursor:normal;
+}
+.row{
+	width:100%;
+	margin-top: -2px;
+	margin-bottom: -2px;
+}
+.box{
+	background:transparent;
+	padding:50px;
+	margin: 3px 1px;
+	float:left;
+	width:50px;
+	cursor:pointer;
+}
+.clear{
+	clear:both;
+}
+.jogo{
+	margin: 0px auto;
+	width: 480px;
+	transform: rotate(-12deg);
+	-ms-transform: rotate(-12deg); /* IE 9 */
+    -webkit-transform: rotate(-12deg); /* Chrome, Safari, Opera */
+	padding-top: 107px;
+	padding-right: 112px;
+}
+.vertical{
+	height:106px;
+	background:rgb(164, 32, 29);
+	float:left;
+	border-radius: 5px;
+	width: 6px;
+}
+.horizontal{
+	height:6px;
+	background:rgb(164, 32, 29);
+	border-radius: 20px;
+	width: 98%;
+}
+.circle.winner{
+	background: url('../img/circle_winner.png');
+}
+.cross.winner{
+	background: url('../img/cross_winner.png');
+}
+.circle{
+	background: url('../img/circle.png');
+	background-size: 105px !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+}
+.cross{
+	background: url('../img/cross.png');
+	background-size: 105px !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+}
+.play-again{
+	display: none;
+	color:white;
+	background:green;
+	padding:4px;
+	width:140px;
+	text-align: center;
+	border-radius: 5px;
+	float: right;
+	margin-right: 180px;
+	margin-top: 14px;
+	transform: rotate(-12deg);
+	-ms-transform: rotate(-12deg); /* IE 9 */
+    -webkit-transform: rotate(-12deg); /* Chrome, Safari, Opera */
+    cursor: pointer;
+}
