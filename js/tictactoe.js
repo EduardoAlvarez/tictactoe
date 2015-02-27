@@ -60,6 +60,8 @@ function playAgain(){
 			$(this).removeClass('circle');
 			$(this).removeClass('clicked');
 			tictactoe = new Array();
+			circles = 0;
+			crosses = 0;
 		});
 		$(".play-again").hide('slow');
 		gameover = false;
