@@ -12,27 +12,37 @@ $(function(){
 					tictactoe[$(this).attr('id')] = 'cross';
 					$(this).addClass('cross');
 					first = false;
-					circles++;
-					if(circles >= 3){
-						showWinner();
-					}
+					crosses++;
 				}else{
 					tictactoe[$(this).attr('id')] = 'circle';
 					$(this).addClass('circle');
 					first = true;
-					crosses++;
-					if(crosses >= 3){
-						showWinner();
-					}
+					circles++;
 				}
 				$(this).addClass('clicked');
+				if(circles >= 3 || crosses >= 3){
+					showWinner();
+				}
+				if(crosses + circles == 9){
+					alert('Deu velha...');
+					playAgain();
+				}
 			}
 		}else{
-			var game = 'O';
-			if(winner.player == 'cross'){
-				game = "X";
-			}
-			alert("Jogo finalizado! \nO Jogador: "+game+" Ganhou!");	
+			
+				var game = false;
+				if(winner.player == 'cross'){
+					game = "X";
+				}else if(winner.player == 'circle'){
+				 game = 'O';
+				}
+				if(game){
+					alert("Jogo finalizado! \nO Jogador: "+game+" Ganhou!");	
+				}else{
+					alert('Deu velha...');
+				}
+				return;
+			
 		}
 	});
 });
@@ -49,9 +59,10 @@ function playAgain(){
 			$(this).removeClass('cross');
 			$(this).removeClass('circle');
 			$(this).removeClass('clicked');
+			tictactoe = new Array();
 		});
+		$(".play-again").hide('slow');
 		gameover = false;
-		$(".play-again").show('hide');
 	});
 }
 function showWinner(){
@@ -64,7 +75,6 @@ function showWinner(){
 	}
 };
 function checkWinner(){
-	console.log(tictactoe[0]);
 	if(tictactoe[0] == tictactoe[3] && tictactoe[0] == tictactoe[6] && tictactoe[0] != undefined){
 	//	 x| |
 	//	-------
