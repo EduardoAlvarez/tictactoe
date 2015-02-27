@@ -3,6 +3,7 @@ var circles = 0;
 var crosses = 0;
 var gameover = false;
 var winner = new Winner();
+var pipe = $('<div class="value-result"> </div>');
 $(function(){
 	var first = true;
 	$(".box").click(function(){
@@ -29,20 +30,18 @@ $(function(){
 				}
 			}
 		}else{
-			
-				var game = false;
-				if(winner.player == 'cross'){
-					game = "X";
-				}else if(winner.player == 'circle'){
-				 game = 'O';
-				}
-				if(game){
-					alert("Jogo finalizado! \nO Jogador: "+game+" Ganhou!");	
-				}else{
-					alert('Deu velha...');
-				}
-				return;
-			
+			var game = false;
+			if(winner.player == 'cross'){
+				game = "X";
+			}else if(winner.player == 'circle'){
+			 game = 'O';
+			}
+			if(game){
+				alert("Jogo finalizado! \nO Jogador: "+game+" Ganhou!");	
+			}else{
+				alert('Deu velha...');
+			}
+			return;			
 		}
 	});
 });
@@ -70,6 +69,17 @@ function playAgain(){
 function showWinner(){
 	winner = checkWinner();
 	if(winner !== false){
+		if(winner.player == "cross"){
+			var qtde = parseInt($(".cross-total").html());
+			qtde++;
+			$(".cross-total").html(qtde);
+			$(".cross-result").append(pipe.clone());
+		}else if(winner.player == "circle"){
+			var qtde = parseInt($(".circle-total").html());
+			qtde++;
+			$(".circle-total").html(qtde);
+			$(".circle-result").append(pipe.clone());
+		}
 		playAgain();
 		$.each(winner.numbers , function(i,e){
 			$("#"+e).addClass('winner');

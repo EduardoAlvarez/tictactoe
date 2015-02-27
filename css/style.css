@@ -100,7 +100,7 @@ background:rgba(0,0,0,0.5);
 .cross-placar{
 float:left;
 padding:10px 10px 0px 10px;
-width:45%;
+width:47%;
 height: 162px;
 border-right:2px solid black;
 }
@@ -108,5 +108,25 @@ border-right:2px solid black;
 float:left;
 padding:10px 10px 0px 10px;
 height: 162px;
-width:45%;
+width:47%;
+}
+.result{
+padding:10px;
+}
+.value-result{
+float:left;
+margin-left:5px;
+opacity:0.6;
+height: 30px;
+width: 3px;
+background: white;
+}
+.label{
+float:right;
+}
+.title{
+float:left;
+}
+.cleaner{
+clear:both;
 }
