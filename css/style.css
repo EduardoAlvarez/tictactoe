@@ -1,3 +1,6 @@
+body{
+font-family:Arial;
+}
 .screen{
 	margin: 0px auto;
 	width: 900px;
@@ -80,4 +83,30 @@
 	-ms-transform: rotate(-12deg); /* IE 9 */
     -webkit-transform: rotate(-12deg); /* Chrome, Safari, Opera */
     cursor: pointer;
+}
+
+.placar{
+width: 900px;
+height: 200px;
+background:url('../img/board.jpg');
+margin: 0px auto;
+color:white;
+}
+.placar-title{
+width:890px;
+padding:5px;
+background:rgba(0,0,0,0.5);
+}
+.cross-placar{
+float:left;
+padding:10px 10px 0px 10px;
+width:45%;
+height: 162px;
+border-right:2px solid black;
+}
+.circle-placar{
+float:left;
+padding:10px 10px 0px 10px;
+height: 162px;
+width:45%;
 }
