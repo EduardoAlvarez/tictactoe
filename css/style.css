@@ -122,11 +122,18 @@ width: 3px;
 background: white;
 }
 .label{
-float:right;
+float:left;
 }
 .title{
-float:left;
+float:right;
 }
 .cleaner{
 clear:both;
+}
+.user{
+float:left;
+}
+.user a{
+color:white;
+text-decoration:none;
 }
